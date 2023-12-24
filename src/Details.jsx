@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import fetchPet from "./fetchPet";
 
-
 const Details = () => {
   const { id } = useParams();
   const results = useQuery(["details", id], fetchPet);
@@ -16,7 +15,7 @@ const Details = () => {
 
   const pet = results.data.pets[0];
 
-   return (
+  return (
     <div className="details">
       <div>
         <h1>{pet.name}</h1>
@@ -26,7 +25,6 @@ const Details = () => {
       </div>
     </div>
   );
-  
 };
 
 export default Details;

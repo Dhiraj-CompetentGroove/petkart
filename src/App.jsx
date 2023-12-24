@@ -21,13 +21,15 @@ const App = () => {
       {/* <h1>Adopt Me!</h1>
       <SearchParams /> */}
       <BrowserRouter>
-        {/* <h1>Adopt Me!</h1> */}
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
         <QueryClientProvider client={queryClient}>
-        <Link to="/">Adopt Me!</Link>
-        <Routes>
-          <Route path="/details/:id" element={<Details />} />
-          <Route path="/" element={<SearchParams />} />
-        </Routes>
+          {/* <Link to="/">Adopt Me!</Link> */}
+          <Routes>
+            <Route path="/details/:id" element={<Details />} />
+            <Route path="/" element={<SearchParams />} />
+          </Routes>
         </QueryClientProvider>
       </BrowserRouter>
     </div>
